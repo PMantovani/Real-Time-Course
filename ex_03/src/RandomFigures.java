@@ -12,7 +12,7 @@ public class RandomFigures implements Runnable {
         this.mWindow = mWindow;
     }
 
-    private void sortCircle() {
+    private void randCircle() {
         int circleX = mRnd.nextInt(500);
         int circleY = mRnd.nextInt(500);
         int circleRadius = mRnd.nextInt(500);
@@ -27,7 +27,7 @@ public class RandomFigures implements Runnable {
         }
     }
 
-    private void sortTriangle() {
+    private void randTriangle() {
         int[] triangleX = new int[3];
         int[] triangleY = new int[3];
 
@@ -48,7 +48,7 @@ public class RandomFigures implements Runnable {
         }
     }
 
-    private void sortRectangle() {
+    private void randRectangle() {
         int rectangleX = mRnd.nextInt(500);
         int rectangleY = mRnd.nextInt(500);
         int rectangleWidth = mRnd.nextInt(500);
@@ -69,13 +69,13 @@ public class RandomFigures implements Runnable {
         for (int i=0; i<10; i++) {
             switch (mType) {
                 case "circle":
-                    sortCircle();
+                    randCircle();
                     break;
                 case "rectangle":
-                    sortRectangle();
+                    randRectangle();
                     break;
                 case "triangle":
-                    sortTriangle();
+                    randTriangle();
                     break;
             }
         }
